@@ -1,96 +1,262 @@
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+  --primary: #22223b;
+  --secondary: #4a4e69;
+  --accent: #f2e9e4;
+  --radius: 12px;
+  --font-main: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --text-light: #ffffff;
+  --text-dark: #22223b;
+  --muted: #b4b4b4;
 }
 
 body {
+  background: var(--accent);
+  color: var(--primary);
+  font-family: var(--font-main);
   margin: 0;
+  padding: 0;
+  min-height: 100vh;
   display: flex;
   place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.todo-app {
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: 0 6px 24px #4a4e6914;
+  max-width: 420px;
+  width: 96%;
+  margin: 36px auto;
+  padding: 2.5rem 1.2rem 1.2rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+  min-height: 90vh;
 }
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+header {
   text-align: center;
 }
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vanilla:hover {
-  filter: drop-shadow(0 0 2em #f7df1eaa);
+header h1 {
+  font-size: 2.3rem;
+  margin: 0.2em 0 0.6em 0;
+  font-weight: 700;
+  color: var(--primary);
+  letter-spacing: -2px;
 }
 
-.card {
-  padding: 2em;
+.add-task-form {
+  display: flex;
+  gap: .6rem;
+  align-items: stretch;
 }
-
-.read-the-docs {
-  color: #888;
+.add-task-form input {
+  flex: 1;
+  border: 1px solid var(--secondary);
+  border-radius: var(--radius);
+  font-size: 1rem;
+  padding: .5em .8em;
+  background: var(--accent);
+  color: var(--primary);
+  outline: none;
+  max-width: 250px;
+  transition: border-color 0.2s;
 }
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+.add-task-form input:focus, .edit-task-form input:focus {
+  border-color: var(--primary);
+}
+.add-task-form button {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius);
+  width: 2.4em;
+  font-size: 1.5em;
   cursor: pointer;
-  transition: border-color 0.25s;
+  font-weight: bold;
+  transition: background 0.12s;
 }
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.add-task-form button:disabled {
+  background: var(--muted);
+  cursor: not-allowed;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+.loading,
+.error,
+.empty {
+  text-align: center;
+  margin-top: 1rem;
+  color: var(--secondary);
+}
+
+.error {
+  color: #b3261e;
+}
+
+.task-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  min-height: 2em;
+}
+
+.task {
+  background: var(--accent);
+  padding: .7em .6em .6em .8em;
+  border-radius: var(--radius);
+  box-shadow: 0 2px 4px #22223b11;
+  display: flex;
+  align-items: center;
+  gap: .6em;
+  position: relative;
+  transition: background 0.15s, box-shadow 0.2s;
+}
+.task.completed {
+  opacity: 0.65;
+  text-decoration: line-through;
+  background: #e7e4de;
+}
+.task.editing {
+  background: #dbe6ef;
+}
+
+.custom-checkbox {
+  position: relative;
+  margin-right: 0.6em;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.custom-checkbox input[type="checkbox"] {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+.custom-checkbox .checkmark {
+  display: inline-block;
+  width: 1.4em;
+  height: 1.4em;
+  border-radius: 50%;
+  border: 2px solid var(--secondary);
+  background: #fff;
+  box-shadow: 0 1px 2px #0001;
+  transition: border-color 0.18s;
+  position: relative;
+}
+.custom-checkbox input[type="checkbox"]:checked + .checkmark {
+  background: var(--secondary);
+  border-color: var(--primary);
+}
+.custom-checkbox input[type="checkbox"]:checked + .checkmark::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0.44em;
+  top: 0.27em;
+  width: 0.28em;
+  height: 0.58em;
+  border: solid #fff;
+  border-width: 0 0.2em 0.2em 0;
+  transform: rotate(42deg);
+}
+
+.task-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  min-width: 0;
+}
+.task-title {
+  font-size: 1.05em;
+  font-weight: 500;
+  word-break: break-word;
+}
+.task-desc {
+  color: var(--muted);
+  font-size: .93em;
+  margin-top: .13em;
+  max-width: 30vw;
+  word-break: break-word;
+}
+
+.task-actions {
+  display: flex;
+  gap: .3em;
+}
+.task-actions button {
+  border: none;
+  background: transparent;
+  color: var(--secondary);
+  font-size: 1.25em;
+  cursor: pointer;
+  padding: 0 .15em;
+  border-radius: 6px;
+  transition: background 0.11s;
+}
+.task-actions button:hover,
+.task-actions button:focus {
+  background: #edede9;
+  color: var(--primary);
+}
+
+.edit-task-form {
+  display: flex;
+  gap: .4em;
+  width: 100%;
+}
+.edit-task-form input {
+  border: 1px solid var(--secondary);
+  border-radius: var(--radius);
+  padding: .4em .6em;
+  font-size: 1em;
+  background: #fff;
+  color: var(--primary);
+}
+.edit-task-form button {
+  border: none;
+  color: var(--primary);
+  background: var(--accent);
+  font-size: 1.5em;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-left: .2em;
+  padding: 0 .18em;
+}
+.edit-task-form button:hover {
+  background: #cfd8dc;
+  color: var(--secondary);
+}
+
+footer {
+  margin-top: 1.2em;
+  text-align: center;
+  font-size: 0.98em;
+  color: var(--secondary);
+}
+
+.footer-small {
+  font-size: 0.88em;
+  color: var(--muted);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+  .todo-app {
+    max-width: 99vw;
+    padding: 1.5rem .4rem 1rem .4rem;
+    min-height: 96vh;
   }
-  a:hover {
-    color: #747bff;
+  header h1 {
+    font-size: 1.45em;
   }
-  button {
-    background-color: #f9f9f9;
+  .edit-task-form input,
+  .add-task-form input {
+    font-size: .98em;
+    max-width: 95vw;
   }
 }
