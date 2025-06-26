@@ -1,0 +1,248 @@
+
+> vite@0.0.0 dev
+> vite dev --port 3000 --host 0.0.0.0
+
+
+  VITE v6.2.5  ready in 589 ms
+
+  ➜  Local:   http://localhost:3000/
+  ➜  Network: http://172.17.0.2:3000/
+Error:   Failed to scan for dependencies from entries:
+  /home/kavia/workspace/code-generation/swifttask-73030-645da8ac/remix_frontend_workspace/remix_frontend/index.html
+
+  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mThe JSX syntax extension is not currently enabled[0m
+
+    src/main.js:156:4:
+[37m      156 │     [32m<[37mdiv className="todo-app">
+          ╵     [32m^[0m
+
+  The esbuild loader for this file is currently set to "js" but it must be set to "jsx" to be able to parse JSX syntax. You can use "loader: { '.js': 'jsx' }" to do that.
+
+
+    at failureErrorWithLog (/home/kavia/workspace/code-generation/swifttask-73030-645da8ac/remix_frontend_workspace/remix_frontend/node_modules/esbuild/lib/main.js:1477:15)
+    at /home/kavia/workspace/code-generation/swifttask-73030-645da8ac/remix_frontend_workspace/remix_frontend/node_modules/esbuild/lib/main.js:946:25
+    at runOnEndCallbacks (/home/kavia/workspace/code-generation/swifttask-73030-645da8ac/remix_frontend_workspace/remix_frontend/node_modules/esbuild/lib/main.js:1317:45)
+    at buildResponseToResult (/home/kavia/workspace/code-generation/swifttask-73030-645da8ac/remix_frontend_workspace/remix_frontend/node_modules/esbuild/lib/main.js:944:7)
+    at /home/kavia/workspace/code-generation/swifttask-73030-645da8ac/remix_frontend_workspace/remix_frontend/node_modules/esbuild/lib/main.js:956:9
+    at new Promise (<anonymous>)
+    at requestCallbacks.on-end (/home/kavia/workspace/code-generation/swifttask-73030-645da8ac/remix_frontend_workspace/remix_frontend/node_modules/esbuild/lib/main.js:955:54)
+    at handleRequest (/home/kavia/workspace/code-generation/swifttask-73030-645da8ac/remix_frontend_workspace/remix_frontend/node_modules/esbuild/lib/main.js:648:17)
+    at handleIncomingPacket (/home/kavia/workspace/code-generation/swifttask-73030-645da8ac/remix_frontend_workspace/remix_frontend/node_modules/esbuild/lib/main.js:673:7)
+    at Socket.readFromStdout (/home/kavia/workspace/code-generation/swifttask-73030-645da8ac/remix_frontend_workspace/remix_frontend/node_modules/esbuild/lib/main.js:601:7)
+4:39:45 AM [vite] Pre-transform error: Failed to parse source for import analysis because the content contains invalid JS syntax. If you are using JSX, make sure to name the file with the .jsx or .tsx extension.
+  Plugin: vite:import-analysis
+  File: /home/kavia/workspace/code-generation/swifttask-73030-645da8ac/remix_frontend_workspace/remix_frontend/src/main.js:158:28
+  156|      <div className="todo-app">
+  157|        <header>
+  158|          <h1>To-Do List</h1>
+     |                             ^
+  159|        </header>
+  160|  
+4:39:45 AM [vite] Pre-transform error: Failed to parse source for import analysis because the content contains invalid JS syntax. If you are using JSX, make sure to name the file with the .jsx or .tsx extension.
+  Plugin: vite:import-analysis
+  File: /home/kavia/workspace/code-generation/swifttask-73030-645da8ac/remix_frontend_workspace/remix_frontend/src/main.js:158:28
+  156|      <div className="todo-app">
+  157|        <header>
+  158|          <h1>To-Do List</h1>
+     |                             ^
+  159|        </header>
+  160|  
+4:39:45 AM [vite] Internal server error: Failed to parse source for import analysis because the content contains invalid JS syntax. If you are using JSX, make sure to name the file with the .jsx or .tsx extension.
+  Plugin: vite:import-analysis
+  File: /home/kavia/workspace/code-generation/swifttask-73030-645da8ac/remix_frontend_workspace/remix_frontend/src/main.js:158:28
+  156|      <div className="todo-app">
+  157|        <header>
+  158|          <h1>To-Do List</h1>
+     |                             ^
+  159|        </header>
+  160|  
+      at TransformPluginContext._formatLog (file:///home/kavia/workspace/code-generation/swifttask-73030-645da8ac/remix_frontend_workspace/remix_frontend/node_modules/vite/dist/node/chunks/dep-Pj_jxEzN.js:47885:41)
+      at TransformPluginContext.error (file:///home/kavia/workspace/code-generation/swifttask-73030-645da8ac/remix_frontend_workspace/remix_frontend/node_modules/vite/dist/node/chunks/dep-Pj_jxEzN.js:47882:16)
+      at TransformPluginContext.transform (file:///home/kavia/workspace/code-generation/swifttask-73030-645da8ac/remix_frontend_workspace/remix_frontend/node_modules/vite/dist/node/chunks/dep-Pj_jxEzN.js:45966:14)
+      at async EnvironmentPluginContainer.transform (file:///home/kavia/workspace/code-generation/swifttask-73030-645da8ac/remix_frontend_workspace/remix_frontend/node_modules/vite/dist/node/chunks/dep-Pj_jxEzN.js:47680:18)
+      at async loadAndTransform (file:///home/kavia/workspace/code-generation/swifttask-73030-645da8ac/remix_frontend_workspace/remix_frontend/node_modules/vite/dist/node/chunks/dep-Pj_jxEzN.js:41327:27)
+4:39:46 AM [vite] Internal server error: Failed to parse source for import analysis because the content contains invalid JS syntax. If you are using JSX, make sure to name the file with the .jsx or .tsx extension.
+  Plugin: vite:import-analysis
+  File: /home/kavia/workspace/code-generation/swifttask-73030-645da8ac/remix_frontend_workspace/remix_frontend/src/main.js:158:28
+  156|      <div className="todo-app">
+  157|        <header>
+  158|          <h1>To-Do List</h1>
+     |                             ^
+  159|        </header>
+  160|  
+      at TransformPluginContext._formatLog (file:///home/kavia/workspace/code-generation/swifttask-73030-645da8ac/remix_frontend_workspace/remix_frontend/node_modules/vite/dist/node/chunks/dep-Pj_jxEzN.js:47885:41)
+      at TransformPluginContext.error (file:///home/kavia/workspace/code-generation/swifttask-73030-645da8ac/remix_frontend_workspace/remix_frontend/node_modules/vite/dist/node/chunks/dep-Pj_jxEzN.js:47882:16)
+      at TransformPluginContext.transform (file:///home/kavia/workspace/code-generation/swifttask-73030-645da8ac/remix_frontend_workspace/remix_frontend/node_modules/vite/dist/node/chunks/dep-Pj_jxEzN.js:45966:14)
+      at async EnvironmentPluginContainer.transform (file:///home/kavia/workspace/code-generation/swifttask-73030-645da8ac/remix_frontend_workspace/remix_frontend/node_modules/vite/dist/node/chunks/dep-Pj_jxEzN.js:47680:18)
+      at async loadAndTransform (file:///home/kavia/workspace/code-generation/swifttask-73030-645da8ac/remix_frontend_workspace/remix_frontend/node_modules/vite/dist/node/chunks/dep-Pj_jxEzN.js:41327:27)
+      at async viteTransformMiddleware (file:///home/kavia/workspace/code-generation/swifttask-73030-645da8ac/remix_frontend_workspace/remix_frontend/node_modules/vite/dist/node/chunks/dep-Pj_jxEzN.js:42807:24)
+4:39:49 AM [vite] Pre-transform error: Failed to parse source for import analysis because the content contains invalid JS syntax. If you are using JSX, make sure to name the file with the .jsx or .tsx extension.
+  Plugin: vite:import-analysis
+  File: /home/kavia/workspace/code-generation/swifttask-73030-645da8ac/remix_frontend_workspace/remix_frontend/src/main.js:158:28
+  156|      <div className="todo-app">
+  157|        <header>
+  158|          <h1>To-Do List</h1>
+     |                             ^
+  159|        </header>
+  160|  
+4:39:49 AM [vite] Internal server error: Failed to parse source for import analysis because the content contains invalid JS syntax. If you are using JSX, make sure to name the file with the .jsx or .tsx extension.
+  Plugin: vite:import-analysis
+  File: /home/kavia/workspace/code-generation/swifttask-73030-645da8ac/remix_frontend_workspace/remix_frontend/src/main.js:158:28
+  156|      <div className="todo-app">
+  157|        <header>
+  158|          <h1>To-Do List</h1>
+     |                             ^
+  159|        </header>
+  160|  
+      at TransformPluginContext._formatLog (file:///home/kavia/workspace/code-generation/swifttask-73030-645da8ac/remix_frontend_workspace/remix_frontend/node_modules/vite/dist/node/chunks/dep-Pj_jxEzN.js:47885:41)
+      at TransformPluginContext.error (file:///home/kavia/workspace/code-generation/swifttask-73030-645da8ac/remix_frontend_workspace/remix_frontend/node_modules/vite/dist/node/chunks/dep-Pj_jxEzN.js:47882:16)
+      at TransformPluginContext.transform (file:///home/kavia/workspace/code-generation/swifttask-73030-645da8ac/remix_frontend_workspace/remix_frontend/node_modules/vite/dist/node/chunks/dep-Pj_jxEzN.js:45966:14)
+      at async EnvironmentPluginContainer.transform (file:///home/kavia/workspace/code-generation/swifttask-73030-645da8ac/remix_frontend_workspace/remix_frontend/node_modules/vite/dist/node/chunks/dep-Pj_jxEzN.js:47680:18)
+      at async loadAndTransform (file:///home/kavia/workspace/code-generation/swifttask-73030-645da8ac/remix_frontend_workspace/remix_frontend/node_modules/vite/dist/node/chunks/dep-Pj_jxEzN.js:41327:27)
+      at async viteTransformMiddleware (file:///home/kavia/workspace/code-generation/swifttask-73030-645da8ac/remix_frontend_workspace/remix_frontend/node_modules/vite/dist/node/chunks/dep-Pj_jxEzN.js:42807:24)
+4:40:02 AM [vite] Pre-transform error: Failed to parse source for import analysis because the content contains invalid JS syntax. If you are using JSX, make sure to name the file with the .jsx or .tsx extension.
+  Plugin: vite:import-analysis
+  File: /home/kavia/workspace/code-generation/swifttask-73030-645da8ac/remix_frontend_workspace/remix_frontend/src/main.js:158:28
+  156|      <div className="todo-app">
+  157|        <header>
+  158|          <h1>To-Do List</h1>
+     |                             ^
+  159|        </header>
+  160|  
+4:40:02 AM [vite] Internal server error: Failed to parse source for import analysis because the content contains invalid JS syntax. If you are using JSX, make sure to name the file with the .jsx or .tsx extension.
+  Plugin: vite:import-analysis
+  File: /home/kavia/workspace/code-generation/swifttask-73030-645da8ac/remix_frontend_workspace/remix_frontend/src/main.js:158:28
+  156|      <div className="todo-app">
+  157|        <header>
+  158|          <h1>To-Do List</h1>
+     |                             ^
+  159|        </header>
+  160|  
+      at TransformPluginContext._formatLog (file:///home/kavia/workspace/code-generation/swifttask-73030-645da8ac/remix_frontend_workspace/remix_frontend/node_modules/vite/dist/node/chunks/dep-Pj_jxEzN.js:47885:41)
+      at TransformPluginContext.error (file:///home/kavia/workspace/code-generation/swifttask-73030-645da8ac/remix_frontend_workspace/remix_frontend/node_modules/vite/dist/node/chunks/dep-Pj_jxEzN.js:47882:16)
+      at TransformPluginContext.transform (file:///home/kavia/workspace/code-generation/swifttask-73030-645da8ac/remix_frontend_workspace/remix_frontend/node_modules/vite/dist/node/chunks/dep-Pj_jxEzN.js:45966:14)
+      at async EnvironmentPluginContainer.transform (file:///home/kavia/workspace/code-generation/swifttask-73030-645da8ac/remix_frontend_workspace/remix_frontend/node_modules/vite/dist/node/chunks/dep-Pj_jxEzN.js:47680:18)
+      at async loadAndTransform (file:///home/kavia/workspace/code-generation/swifttask-73030-645da8ac/remix_frontend_workspace/remix_frontend/node_modules/vite/dist/node/chunks/dep-Pj_jxEzN.js:41327:27)
+4:40:02 AM [vite] Pre-transform error: Failed to parse source for import analysis because the content contains invalid JS syntax. If you are using JSX, make sure to name the file with the .jsx or .tsx extension.
+  Plugin: vite:import-analysis
+  File: /home/kavia/workspace/code-generation/swifttask-73030-645da8ac/remix_frontend_workspace/remix_frontend/src/main.js:158:28
+  156|      <div className="todo-app">
+  157|        <header>
+  158|          <h1>To-Do List</h1>
+     |                             ^
+  159|        </header>
+  160|  
+4:40:03 AM [vite] Internal server error: Failed to parse source for import analysis because the content contains invalid JS syntax. If you are using JSX, make sure to name the file with the .jsx or .tsx extension.
+  Plugin: vite:import-analysis
+  File: /home/kavia/workspace/code-generation/swifttask-73030-645da8ac/remix_frontend_workspace/remix_frontend/src/main.js:158:28
+  156|      <div className="todo-app">
+  157|        <header>
+  158|          <h1>To-Do List</h1>
+     |                             ^
+  159|        </header>
+  160|  
+      at TransformPluginContext._formatLog (file:///home/kavia/workspace/code-generation/swifttask-73030-645da8ac/remix_frontend_workspace/remix_frontend/node_modules/vite/dist/node/chunks/dep-Pj_jxEzN.js:47885:41)
+      at TransformPluginContext.error (file:///home/kavia/workspace/code-generation/swifttask-73030-645da8ac/remix_frontend_workspace/remix_frontend/node_modules/vite/dist/node/chunks/dep-Pj_jxEzN.js:47882:16)
+      at TransformPluginContext.transform (file:///home/kavia/workspace/code-generation/swifttask-73030-645da8ac/remix_frontend_workspace/remix_frontend/node_modules/vite/dist/node/chunks/dep-Pj_jxEzN.js:45966:14)
+      at async EnvironmentPluginContainer.transform (file:///home/kavia/workspace/code-generation/swifttask-73030-645da8ac/remix_frontend_workspace/remix_frontend/node_modules/vite/dist/node/chunks/dep-Pj_jxEzN.js:47680:18)
+      at async loadAndTransform (file:///home/kavia/workspace/code-generation/swifttask-73030-645da8ac/remix_frontend_workspace/remix_frontend/node_modules/vite/dist/node/chunks/dep-Pj_jxEzN.js:41327:27)
+      at async viteTransformMiddleware (file:///home/kavia/workspace/code-generation/swifttask-73030-645da8ac/remix_frontend_workspace/remix_frontend/node_modules/vite/dist/node/chunks/dep-Pj_jxEzN.js:42807:24)
+4:40:04 AM [vite] Pre-transform error: Failed to parse source for import analysis because the content contains invalid JS syntax. If you are using JSX, make sure to name the file with the .jsx or .tsx extension.
+  Plugin: vite:import-analysis
+  File: /home/kavia/workspace/code-generation/swifttask-73030-645da8ac/remix_frontend_workspace/remix_frontend/src/main.js:158:28
+  156|      <div className="todo-app">
+  157|        <header>
+  158|          <h1>To-Do List</h1>
+     |                             ^
+  159|        </header>
+  160|  
+4:40:04 AM [vite] Internal server error: Failed to parse source for import analysis because the content contains invalid JS syntax. If you are using JSX, make sure to name the file with the .jsx or .tsx extension.
+  Plugin: vite:import-analysis
+  File: /home/kavia/workspace/code-generation/swifttask-73030-645da8ac/remix_frontend_workspace/remix_frontend/src/main.js:158:28
+  156|      <div className="todo-app">
+  157|        <header>
+  158|          <h1>To-Do List</h1>
+     |                             ^
+  159|        </header>
+  160|  
+      at TransformPluginContext._formatLog (file:///home/kavia/workspace/code-generation/swifttask-73030-645da8ac/remix_frontend_workspace/remix_frontend/node_modules/vite/dist/node/chunks/dep-Pj_jxEzN.js:47885:41)
+      at TransformPluginContext.error (file:///home/kavia/workspace/code-generation/swifttask-73030-645da8ac/remix_frontend_workspace/remix_frontend/node_modules/vite/dist/node/chunks/dep-Pj_jxEzN.js:47882:16)
+      at TransformPluginContext.transform (file:///home/kavia/workspace/code-generation/swifttask-73030-645da8ac/remix_frontend_workspace/remix_frontend/node_modules/vite/dist/node/chunks/dep-Pj_jxEzN.js:45966:14)
+      at async EnvironmentPluginContainer.transform (file:///home/kavia/workspace/code-generation/swifttask-73030-645da8ac/remix_frontend_workspace/remix_frontend/node_modules/vite/dist/node/chunks/dep-Pj_jxEzN.js:47680:18)
+      at async loadAndTransform (file:///home/kavia/workspace/code-generation/swifttask-73030-645da8ac/remix_frontend_workspace/remix_frontend/node_modules/vite/dist/node/chunks/dep-Pj_jxEzN.js:41327:27)
+      at async viteTransformMiddleware (file:///home/kavia/workspace/code-generation/swifttask-73030-645da8ac/remix_frontend_workspace/remix_frontend/node_modules/vite/dist/node/chunks/dep-Pj_jxEzN.js:42807:24)
+4:40:10 AM [vite] Pre-transform error: Failed to parse source for import analysis because the content contains invalid JS syntax. If you are using JSX, make sure to name the file with the .jsx or .tsx extension.
+  Plugin: vite:import-analysis
+  File: /home/kavia/workspace/code-generation/swifttask-73030-645da8ac/remix_frontend_workspace/remix_frontend/src/main.js:158:28
+  156|      <div className="todo-app">
+  157|        <header>
+  158|          <h1>To-Do List</h1>
+     |                             ^
+  159|        </header>
+  160|  
+4:40:11 AM [vite] Internal server error: Failed to parse source for import analysis because the content contains invalid JS syntax. If you are using JSX, make sure to name the file with the .jsx or .tsx extension.
+  Plugin: vite:import-analysis
+  File: /home/kavia/workspace/code-generation/swifttask-73030-645da8ac/remix_frontend_workspace/remix_frontend/src/main.js:158:28
+  156|      <div className="todo-app">
+  157|        <header>
+  158|          <h1>To-Do List</h1>
+     |                             ^
+  159|        </header>
+  160|  
+      at TransformPluginContext._formatLog (file:///home/kavia/workspace/code-generation/swifttask-73030-645da8ac/remix_frontend_workspace/remix_frontend/node_modules/vite/dist/node/chunks/dep-Pj_jxEzN.js:47885:41)
+      at TransformPluginContext.error (file:///home/kavia/workspace/code-generation/swifttask-73030-645da8ac/remix_frontend_workspace/remix_frontend/node_modules/vite/dist/node/chunks/dep-Pj_jxEzN.js:47882:16)
+      at TransformPluginContext.transform (file:///home/kavia/workspace/code-generation/swifttask-73030-645da8ac/remix_frontend_workspace/remix_frontend/node_modules/vite/dist/node/chunks/dep-Pj_jxEzN.js:45966:14)
+      at async EnvironmentPluginContainer.transform (file:///home/kavia/workspace/code-generation/swifttask-73030-645da8ac/remix_frontend_workspace/remix_frontend/node_modules/vite/dist/node/chunks/dep-Pj_jxEzN.js:47680:18)
+      at async loadAndTransform (file:///home/kavia/workspace/code-generation/swifttask-73030-645da8ac/remix_frontend_workspace/remix_frontend/node_modules/vite/dist/node/chunks/dep-Pj_jxEzN.js:41327:27)
+      at async viteTransformMiddleware (file:///home/kavia/workspace/code-generation/swifttask-73030-645da8ac/remix_frontend_workspace/remix_frontend/node_modules/vite/dist/node/chunks/dep-Pj_jxEzN.js:42807:24)
+4:40:35 AM [vite] Pre-transform error: Failed to parse source for import analysis because the content contains invalid JS syntax. If you are using JSX, make sure to name the file with the .jsx or .tsx extension.
+  Plugin: vite:import-analysis
+  File: /home/kavia/workspace/code-generation/swifttask-73030-645da8ac/remix_frontend_workspace/remix_frontend/src/main.js:158:28
+  156|      <div className="todo-app">
+  157|        <header>
+  158|          <h1>To-Do List</h1>
+     |                             ^
+  159|        </header>
+  160|  
+4:40:36 AM [vite] Pre-transform error: Failed to parse source for import analysis because the content contains invalid JS syntax. If you are using JSX, make sure to name the file with the .jsx or .tsx extension.
+  Plugin: vite:import-analysis
+  File: /home/kavia/workspace/code-generation/swifttask-73030-645da8ac/remix_frontend_workspace/remix_frontend/src/main.js:158:28
+  156|      <div className="todo-app">
+  157|        <header>
+  158|          <h1>To-Do List</h1>
+     |                             ^
+  159|        </header>
+  160|  
+4:40:36 AM [vite] Internal server error: Failed to parse source for import analysis because the content contains invalid JS syntax. If you are using JSX, make sure to name the file with the .jsx or .tsx extension.
+  Plugin: vite:import-analysis
+  File: /home/kavia/workspace/code-generation/swifttask-73030-645da8ac/remix_frontend_workspace/remix_frontend/src/main.js:158:28
+  156|      <div className="todo-app">
+  157|        <header>
+  158|          <h1>To-Do List</h1>
+     |                             ^
+  159|        </header>
+  160|  
+      at TransformPluginContext._formatLog (file:///home/kavia/workspace/code-generation/swifttask-73030-645da8ac/remix_frontend_workspace/remix_frontend/node_modules/vite/dist/node/chunks/dep-Pj_jxEzN.js:47885:41)
+      at TransformPluginContext.error (file:///home/kavia/workspace/code-generation/swifttask-73030-645da8ac/remix_frontend_workspace/remix_frontend/node_modules/vite/dist/node/chunks/dep-Pj_jxEzN.js:47882:16)
+      at TransformPluginContext.transform (file:///home/kavia/workspace/code-generation/swifttask-73030-645da8ac/remix_frontend_workspace/remix_frontend/node_modules/vite/dist/node/chunks/dep-Pj_jxEzN.js:45966:14)
+      at async EnvironmentPluginContainer.transform (file:///home/kavia/workspace/code-generation/swifttask-73030-645da8ac/remix_frontend_workspace/remix_frontend/node_modules/vite/dist/node/chunks/dep-Pj_jxEzN.js:47680:18)
+      at async loadAndTransform (file:///home/kavia/workspace/code-generation/swifttask-73030-645da8ac/remix_frontend_workspace/remix_frontend/node_modules/vite/dist/node/chunks/dep-Pj_jxEzN.js:41327:27)
+      at async viteTransformMiddleware (file:///home/kavia/workspace/code-generation/swifttask-73030-645da8ac/remix_frontend_workspace/remix_frontend/node_modules/vite/dist/node/chunks/dep-Pj_jxEzN.js:42807:24)
+4:40:36 AM [vite] Internal server error: Failed to parse source for import analysis because the content contains invalid JS syntax. If you are using JSX, make sure to name the file with the .jsx or .tsx extension.
+  Plugin: vite:import-analysis
+  File: /home/kavia/workspace/code-generation/swifttask-73030-645da8ac/remix_frontend_workspace/remix_frontend/src/main.js:158:28
+  156|      <div className="todo-app">
+  157|        <header>
+  158|          <h1>To-Do List</h1>
+     |                             ^
+  159|        </header>
+  160|  
+      at TransformPluginContext._formatLog (file:///home/kavia/workspace/code-generation/swifttask-73030-645da8ac/remix_frontend_workspace/remix_frontend/node_modules/vite/dist/node/chunks/dep-Pj_jxEzN.js:47885:41)
+      at TransformPluginContext.error (file:///home/kavia/workspace/code-generation/swifttask-73030-645da8ac/remix_frontend_workspace/remix_frontend/node_modules/vite/dist/node/chunks/dep-Pj_jxEzN.js:47882:16)
+      at TransformPluginContext.transform (file:///home/kavia/workspace/code-generation/swifttask-73030-645da8ac/remix_frontend_workspace/remix_frontend/node_modules/vite/dist/node/chunks/dep-Pj_jxEzN.js:45966:14)
+      at async EnvironmentPluginContainer.transform (file:///home/kavia/workspace/code-generation/swifttask-73030-645da8ac/remix_frontend_workspace/remix_frontend/node_modules/vite/dist/node/chunks/dep-Pj_jxEzN.js:47680:18)
+      at async loadAndTransform (file:///home/kavia/workspace/code-generation/swifttask-73030-645da8ac/remix_frontend_workspace/remix_frontend/node_modules/vite/dist/node/chunks/dep-Pj_jxEzN.js:41327:27)
+      at async viteTransformMiddleware (file:///home/kavia/workspace/code-generation/swifttask-73030-645da8ac/remix_frontend_workspace/remix_frontend/node_modules/vite/dist/node/chunks/dep-Pj_jxEzN.js:42807:24)
+4:41:01 AM [vite] (client) page reload index.html
+4:41:01 AM [vite] Pre-transform error: Failed to load url /src/main.jsx (resolved id: /src/main.jsx). Does the file exist?
+4:41:13 AM [vite] (client) page reload src/main.js
